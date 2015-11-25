@@ -1,33 +1,22 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/UI/SonicHose_UI.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Gear/Extinguishers/SonicHose.cs">
     <Files>
-      <File FileName="Assets/Scripts/UI/BlackDeath_UI.cs" Line="33" Column="1" />
-      <File FileName="Assets/Scripts/Gear/Extinguishers/BlackDeath.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/Gear/Extinguishers/SonicHose.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/UI/SonicHose_UI.cs" Line="24" Column="5" />
-      <File FileName="Assets/Editor/SonicHoseUI_Editor.cs" Line="30" Column="4" />
-      <File FileName="Assets/Editor/GrenadeTosser_Editor.cs" Line="23" Column="3" />
+      <File FileName="Assets/Scripts/Gear/Extinguishers/SonicHose.cs" Line="88" Column="37" />
+      <File FileName="Assets/Scripts/Fire/FireSpread.cs" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State expanded="True">
           <Node name="Assembly-CSharp" expanded="True">
-            <Node name="Realistic Effects Pack" expanded="True">
-              <Node name="Scripts" expanded="True">
-                <Node name="Share" expanded="True" />
-              </Node>
-            </Node>
             <Node name="Scripts" expanded="True">
               <Node name="Fire" expanded="True" />
               <Node name="Gear" expanded="True">
-                <Node name="Extinguishers" expanded="True" />
+                <Node name="Extinguishers" expanded="True">
+                  <Node name="SonicHose.cs" selected="True" />
+                </Node>
               </Node>
               <Node name="Player" expanded="True" />
-              <Node name="UI" expanded="True">
-                <Node name="SonicHose_UI.cs" selected="True" />
-              </Node>
-              <Node name="Utilities" expanded="True" />
             </Node>
           </Node>
           <Node name="Assembly-CSharp-Editor" expanded="True">
@@ -38,9 +27,7 @@
     </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore>
-      <Breakpoint file="/Users/hectorrivera-melo/DaVinci/Fired Up/Assets/Scripts/Gear/Inventory.cs" line="31" />
-    </BreakpointStore>
+    <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches>
     <Watch file="Assets/Scripts/Player/GearSelector.cs" line="52" offsetX="252" offsetY="765" expression="CurrentGear" liveUpdate="False" />
