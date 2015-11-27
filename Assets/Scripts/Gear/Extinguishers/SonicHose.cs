@@ -9,6 +9,7 @@ public class SonicHose : MonoBehaviour {
 	[SerializeField]	private Animator sonicHoseAnimator;
 	[SerializeField]	private Collider sonicBeamCollider;
 	[SerializeField]	private AudioSource sonicSound;
+
 	private float batteryPower; public float BatteryPower{get{return batteryPower;}}
 	private GearEnum LastGear;
 	private List <Collider> fires; 
@@ -73,11 +74,11 @@ public class SonicHose : MonoBehaviour {
 
 	void OnTriggerEnter(Collider col){
 		if (LayerMaskExtensions.IsInLayerMask(col.gameObject,Layers.LayerMasks.allFires) && !fires.Contains(col)){
-			StartCoroutine (Extinguish(col));
+			StartCoroutine (TryToExtinguish(col));
 		}
 	}
 
-	IEnumerator Extinguish(Collider col){
+	IEnumerator TryToExtinguish(Collider col){
 		fires.Add(col);
 		float timePassed =0;
 		while (fires.Contains(col) && timePassed<timeToExtinguish){
@@ -85,7 +86,8 @@ public class SonicHose : MonoBehaviour {
 			yield return null;
 		}
 		if (fires.Contains(col)){
-			//extinguish fire
+			FireSpread fireSpreadScript = col.GetComponent<FireSpread>();
+			fireSpreadScript.ExtinguishFire();
 			fires.Remove(col);
 		}
 	}
