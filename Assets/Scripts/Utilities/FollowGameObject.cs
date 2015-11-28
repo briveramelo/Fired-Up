@@ -3,8 +3,7 @@ using System.Collections;
 
 public class FollowGameObject : MonoBehaviour {
 
-	[SerializeField]
-	private Transform objectToFollow;
+	[SerializeField]	private Transform objectToFollow;
 	
 	// Update is called once per frame
 	void Update () {

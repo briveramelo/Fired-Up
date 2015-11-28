@@ -3,15 +3,8 @@ using System.Collections;
 
 public class UI_Animations : MonoBehaviour {
 
-	private bool scaling;
-	private float growToSize;
-	private Vector3 startScale;
-	private float lerpFraction;
-
-	[SerializeField]
-	private TextMesh inventoryQuantity;
-	[SerializeField]
-	private Animator UIAnimator;
+	[SerializeField]	private TextMesh inventoryQuantity;
+	[SerializeField]	private Animator UIAnimator;
 	
 	
 	public virtual void ActivateUI(){

@@ -1,20 +1,16 @@
 ﻿using UnityEngine;
 using System.Collections;
+using FU;
 
 public class Legs : MonoBehaviour {
 
-	[SerializeField]
-	private	Rigidbody playerBody;
-	[SerializeField]
-	private Transform feetTran;
+	[SerializeField]	private	Rigidbody playerBody;
+	[SerializeField]	private Transform feetTran;
 	private float minAxisInput;
 	private float speed;
 	private float maxSpeed;
 	private float jumpForce;
 	private float moveForce;
-	[SerializeField]
-	private LayerMask groundMask;
-
 
 	// Use this for initialization
 	void Awake () {
@@ -32,8 +28,8 @@ public class Legs : MonoBehaviour {
 
 	void Move(){
 		speed = playerBody.velocity.magnitude;
-		float forwardAxis = Input.GetAxis(FU.Controls.Forward);
-		float sidewaysAxis = Input.GetAxis(FU.Controls.Sideways);
+		float forwardAxis = Input.GetAxis(Controls.Forward);
+		float sidewaysAxis = Input.GetAxis(Controls.Sideways);
 
 		if (Mathf.Abs (forwardAxis)>=minAxisInput){
 			playerBody.AddForce( moveForce * transform.forward * -Mathf.Sign( forwardAxis ), ForceMode.VelocityChange );
@@ -48,8 +44,8 @@ public class Legs : MonoBehaviour {
 	}
 
 	void Jump(){
-		if (Input.GetButtonDown (FU.Controls.Jump)){
-			if (Physics.CheckSphere(feetTran.position,.5f,groundMask)){
+		if (Input.GetButtonDown (Controls.Jump)){
+			if (Physics.CheckSphere(feetTran.position,.5f,Layers.LayerMasks.ground.value)){
 				playerBody.velocity = new Vector3 (playerBody.velocity.x,0f,playerBody.velocity.z);
 				playerBody.AddForce (jumpForce * Vector3.up);
 			}
