@@ -91,6 +91,8 @@
      <Compile Include="Assets\Realistic Effects Pack\Scripts\Share\RotateAround.cs" />
      <Compile Include="Assets\Realistic Effects Pack\Scripts\Share\SetPositionOnHit.cs" />
      <Compile Include="Assets\Realistic Effects Pack\Scripts\Share\UVTextureAnimator.cs" />
+     <Compile Include="Assets\Scripts\Environment\EventTrigger.cs" />
+     <Compile Include="Assets\Scripts\Environment\ITriggerable.cs" />
      <Compile Include="Assets\Scripts\Fire\FireSpread.cs" />
      <Compile Include="Assets\Scripts\Gear\Extinguishers\BlackDeath.cs" />
      <Compile Include="Assets\Scripts\Gear\Extinguishers\HoseStateEnums.cs" />
@@ -109,6 +111,7 @@
      <Compile Include="Assets\Scripts\UI\UI_Animations.cs" />
      <Compile Include="Assets\Scripts\Utilities\FU.cs" />
      <Compile Include="Assets\Scripts\Utilities\FollowGameObject.cs" />
+     <Compile Include="Assets\Scripts\Utilities\RoomOccluder.cs" />
      <None Include="Assets\Realistic Effects Pack\Shaders\IceVert 1.shader" />
      <None Include="Assets\Realistic Effects Pack\Shaders\GlowAdditive.shader" />
      <None Include="Assets\Realistic Effects Pack\Shaders\Matrix\Additive.shader" />
@@ -156,11 +159,17 @@
      <None Include="Assets\Realistic Effects Pack\Shaders\IceVert.shader" />
      <None Include="Assets\Realistic Effects Pack\Shaders\Projectors\ProjectorBlended.shader" />
      <None Include="Assets\Realistic Effects Pack\Shaders\WaterFree.shader" />
+ <Reference Include="UnityEngine.Advertisements">
+ <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/Advertisements/UnityEngine.Advertisements.dll</HintPath>
+ </Reference>
  <Reference Include="UnityEngine.UI">
  <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.Networking">
  <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/Networking/UnityEngine.Networking.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.Analytics">
+ <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/UnityAnalytics/UnityEngine.Analytics.dll</HintPath>
  </Reference>
  <Reference Include="UnityEditor.iOS.Extensions.Xcode">
  <HintPath>/Applications/Unity/Unity.app/Contents/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.Xcode.dll</HintPath>

@@ -184,6 +184,18 @@ namespace FU{
 		}
 	}
 	#endregion
+
+	#region Interface 
+	public static class Interface{
+		public static T Find<T>(GameObject gameObject) where T : class{
+			foreach (var component in gameObject.GetComponents<MonoBehaviour>()){
+				if (component.isActiveAndEnabled && component is T)
+					return component as T;
+			}
+			return null;
+		}
+	}
+	#endregion
 }
 
 #region ExtensionMethods
